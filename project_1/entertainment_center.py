@@ -1,34 +1,31 @@
 import media, fresh_tomatoes
 
-toy_story = media.Movie("Toy Story",
-                        "A story of a boy and his toys that come to life",
-                        "http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
-                        "https://www.youtube.com/watch?v=vwyZH85NQC4")
+#movie objects
+avengers = media.Movie("The Avengers",
+                        "https://upload.wikimedia.org/wikipedia/en/f/f9/TheAvengers2012Poster.jpg",
+                        "https://www.youtube.com/watch?v=eOrNdBpGMv8")
 
-avatar = media.Movie("Avatar",
-                     "A marine on a alien planet",
-                     "http://upload.wikimedia.org/wikipedia/id/b/b0/Avatar-Teaser-Poster.jpg",
-                     "https://www.youtube.com/watch?v=5PSNL1qE6VY")
+super_troopers = media.Movie("Super Troopers", 
+                             "https://upload.wikimedia.org/wikipedia/en/1/19/Supertrooper.jpg",
+                             "https://www.youtube.com/watch?v=TKzD0z8Jv9I")
 
-school_of_rock = media.Movie("School of Rock",
-                             "Using rock music to learn",
-                             "http://upload.wikimedia.org/wikipedia/en/1/11/School_of_Rock_Poster.jpg",
-                             "https://www.youtube.com/watch?v=3PsUJFEBC74")
+incredibles = media.Movie("The Incredibles", 
+                            "https://upload.wikimedia.org/wikipedia/en/e/ec/The_Incredibles.jpg",
+                            "https://www.youtube.com/watch?v=eZbzbC9285I")
 
-ratatouille = media.Movie("Ratatouille",
-                          "A rat is a chef in Paris",
-                          "http://upload.wikimedia.org/wikipedia/en/5/50/RatatouillePoster.jpg",
-                          "https://www.youtube.com/watch?v=c3sBBRxDAqk")
+mallrats = media.Movie("Mallrats", 
+                        "https://upload.wikimedia.org/wikipedia/en/9/96/Mallrats.jpg",
+                        "https://www.youtube.com/watch?v=eOd5zJLsZEc")
 
-midnight_in_paris = media.Movie("Midnight in Paris",
-                                "Going back in time to meet authors",
-                                "http://upload.wikimedia.org/wikipedia/en/9/9f/Midnight_in_Paris_Poster.jpg",
-                                "https://www.youtube.com/watch?v=FAfR8omt-CY")
+deadpool = media.Movie("Deadpool", 
+                        "https://upload.wikimedia.org/wikipedia/en/4/46/Deadpool_poster.jpg",
+                        "https://www.youtube.com/watch?v=Xithigfg7dA")
 
-hunger_games = media.Movie("Hunger Games",
-                           "A really real reality show",
-                           "http://upload.wikimedia.org/wikipedia/en/4/42/HungerGamesPoster.jpg",
-                           "https://www.youtube.com/watch?v=mfmrPu43DF8")
+deadpool_2 = media.Movie("Deadpool 2", 
+                        "https://upload.wikimedia.org/wikipedia/en/c/cf/Deadpool_2_poster.jpg",
+                        "https://www.youtube.com/watch?v=D86RtevtfrA")
+#list of the movie objects
+movies = [avengers, super_troopers, incredibles, mallrats, deadpool, deadpool_2]
 
-movies = [toy_story, avatar, school_of_rock, ratatouille, midnight_in_paris, hunger_games]
+#call fresh tomatoes and load the list of movies 
 fresh_tomatoes.open_movies_page(movies)
