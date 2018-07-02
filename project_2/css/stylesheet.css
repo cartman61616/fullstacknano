@@ -1,0 +1,58 @@
+.logo {
+  height: 70px;
+  width: 70px;
+  margin: 5px 15px;
+  float: left;
+}
+
+.header-container {
+  vertical-align: bottom;
+  padding-bottom: 10px;
+}
+
+.main-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.main-image-container {
+  border-top: solid 4px #7d97ad;
+  padding-top: 10px;
+}
+
+.header-title {
+  text-align: right;
+  color: #2d3c49;
+  font-weight: lighter;
+  font-size: 50px;
+}
+
+.header-subtitle {
+  text-align: right;
+  color: #2d3c49;
+}
+
+.section {
+  color: #7d97ad;
+  padding: 5px;
+}
+
+.title {
+  text-align: center;
+  color: #2d3c49;
+  padding-top: 10px;
+}
+
+.project-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  box-shadow: 1px 1px 5px 1px #ddd;
+}
+
+.description {
+  max-width: 320px;
+  margin: 10px auto;
+  color: #2d3c49;
+}
