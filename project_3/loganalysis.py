@@ -77,13 +77,16 @@ def main():
     print("The three most popular articles of all time are:")
 
     for article in articles:
-        print("{title} - {views} views".format(title=article[0], views=article[1]))
+        print("{title} - {views} views".format(title=article[0],
+                                               views=article[1]))
     print("The most popular authors of all time are:")
     for author in authors:
-        print("{name} - {views} views".format(name=author[0], views=author[1]))
+        print("{name} - {views} views".format(name=author[0],
+                                              views=author[1]))
     print("On which days did more than 1% of requests lead to errors?")
     for error in errors:
-        print("{date} - {error_rate}% errors".format(date=error[0], error_rate=error[1]))
+        print("{date} - {error_rate}% errors".format(date=error[0],
+                                                     error_rate=error[1]))
 
 
 if __name__ == '__main__':
