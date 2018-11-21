@@ -1,0 +1,28 @@
+body {
+    font-family: "Arial", sans-serif;
+}
+
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0;
+}
+
+.nav-title {
+    font-size: 25px;
+    color: green;
+}
+
+#map {
+    margin: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: -4;
+}
+
+#pano {
+    width: 200px;
+    height: 200px;
+}
