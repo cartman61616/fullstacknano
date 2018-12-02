@@ -26,3 +26,15 @@ body {
     width: 200px;
     height: 200px;
 }
+
+.sidenav {
+    margin: 0;
+    position: absolute;
+    top: 10px;
+}
+
+.list-group-item:focus {
+    color: #fff;
+    background-color: rgb(34, 34, 34);
+    border-color: rgb(10, 161, 207);
+}

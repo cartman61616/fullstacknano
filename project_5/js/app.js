@@ -40,13 +40,13 @@ var locationMarker = function(data) {
     var clientSecret = 'RDAXYQIBUJR2UMNC1RDX5BVWWV1JXBCWUH12LUTO0GFQHMDL';
 
     //call foursquare
-    var reqURL = 'https://api.foursquare.com/v2/venues/search?ll=' + this.position.lat + ',' + this.position.lng + '&client_id=' + clientID + '&client_secret=' + clientSecret + '&v=20180323' + '&query=' + this.title;
+    var reqURL = 'https://api.foursquare.com/v2/venues/search?ll=' + this.position.lat + ',' + 
+        this.position.lng + '&client_id=' + clientID + '&client_secret=' + clientSecret + '&v=20180323' + '&query=' + this.title;
 
     $.getJSON(reqURL).done(function(data) {
 		var results = data.response.venues[0];
         self.street = results.location.formattedAddress[0] ? results.location.formattedAddress[0]: 'N/A';
         self.city = results.location.formattedAddress[1] ? results.location.formattedAddress[1]: 'N/A';
-        self.phone = results.contact.formattedPhone ? results.contact.formattedPhone : 'N/A';
     }).fail(function() {
         alert('Something went wrong with foursquare');
     });
@@ -70,9 +70,10 @@ var locationMarker = function(data) {
         }
     });
     
-    //onClick event to open an indowindow at each marker
+    //onClick event to open an infoWindow at each marker
     this.marker.addListener('click', function() {
         populateInfoWindow(this, self.street, self.city, self.phone, infoWindow);
+        bouncer(this);
         map.panTo(this.getPosition());
     });
 
@@ -157,6 +158,16 @@ function populateInfoWindow(marker, street, city, phone, infowindow) {
     }
 }
 
+function bouncer(marker) {
+    if (marker.getAnimation() !== null) {
+      marker.setAnimation(null);
+    } else {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+      setTimeout(function() {
+          marker.setAnimation(null);
+      }, 1400);
+    }
+  }
 
 //create marker icon
 function makeMarkerIcon(markerColor) {
